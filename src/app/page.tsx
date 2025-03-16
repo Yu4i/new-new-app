@@ -1,37 +1,18 @@
-import Card from '@/components/Card';
 import Layout from '@/components/Layout';
+import DataList from '@/components/DataList';
 
 export default function Home() {
   return (
     <Layout>
-      <div className="space-y-8">
-        <Card title="App about something">
-          <p>
-            This is a sample application built with Next.js, TypeScript, and Tailwind CSS.
-            Feel free to explore and modify the components!
+      <div className="space-y-6">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold text-gray-800">Real-Time Data Manager</h1>
+          <p className="text-gray-600 mt-2">
+            Add, edit, and organize your data in real-time across all your devices
           </p>
-        </Card>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Card title="Features">
-            <ul className="list-disc list-inside space-y-2">
-              <li>Next.js 14 with App Router</li>
-              <li>TypeScript for type safety</li>
-              <li>Tailwind CSS for styling</li>
-              <li>Responsive design</li>
-            </ul>
-          </Card>
-
-          <Card title="Getting Started">
-            <p className="mb-4">
-              Edit <code className="bg-gray-100 rounded px-2 py-1">src/app/page.tsx</code> to
-              start customizing your application.
-            </p>
-            <p>
-              Check out the documentation for more information about building with Next.js.
-            </p>
-          </Card>
         </div>
+        
+        <DataList />
       </div>
     </Layout>
   );
